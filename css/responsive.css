@@ -1,5 +1,45 @@
 /* GLOBAL AND MOBILE STYLES FIRST */
 
+body {
+  margin: 0;
+  padding: 0;
+  background: #222;
+}
+
+header {
+  background: #ccc;
+  color: #444;
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+  padding: 1em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+main {
+  margin: 0 auto;
+  min-width: 320px;
+  background: #eee;
+  text-align: center;
+  padding: 2px;
+}
+
+section {
+  font-size: 1em;
+  background: #888;
+  width: 100%;
+  margin: 1px;
+  display: block;
+}
+
 /*
   - this applies to any screen sizes under 500px
   - if you leave the width off, sections will automatically fill the full page width
@@ -8,7 +48,17 @@
 
 
 /* FIRST BREAKPOINT (MEDIUM SIZE) */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 500px) { 
+  section {
+    width: 44%;
+    margin: 5px;
+    display: inline-block;
+  }
+
+  section:hover {
+    background: #666;
+  }
+
   /* 
     - applies to screens larger than 499px (unless specifically overwritten these styles will also apply to screens larger than 999px)
     - add any hover states here
@@ -23,6 +73,22 @@
 
 /* SECOND BREAKPOINT (DESKTOP SIZE) */
 @media screen and (min-width: 1000px) {
+  body {
+    background: #222;
+  }
+
+  main {
+    max-width: 1600px;
+    margin: 0 auto;
+    background: #eee;
+    text-align: center;
+    padding: 1px;
+  }
+
+  section {
+    width: 22%;
+  }
+
   /*
     - applies to screens larger than 999px only
     - add a max-width to your main section
